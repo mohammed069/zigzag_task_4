@@ -5,6 +5,7 @@ import 'part_2/motor_cycle.dart';
 import 'part_3/circle.dart';
 import 'part_3/rectangle.dart';
 import 'part_3/shape.dart';
+import 'part_4/polymorphism.dart';
 
 void main() {
   var person = Person("Ali", 25, "Cairo");
@@ -20,20 +21,4 @@ void main() {
   var rectangle = Rectangle1(10, 5);
   var circle = Circle(7);
   calculateTotal([rectangle, circle]);
-}
-
-
-
-
-void calculateTotal(List<Shape> shapes) {
-  double totalArea = 0;
-  double totalPerimeter = 0;
-
-  for (var shape in shapes) {
-    totalArea += shape.calculateArea();
-    totalPerimeter += shape.calculatePerimeter();
-  }
-
-  print("Total Area: $totalArea");
-  print("Total Perimeter: $totalPerimeter");
 }
